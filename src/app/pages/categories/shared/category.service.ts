@@ -10,16 +10,16 @@ import { Category } from "./category.model";
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiPath: string = "api/categories";
+  private apiPath: string = "http://localhost:3000/posts";
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getAll(): Observable<Category[]>{
-    return this.http.get(this.apiPath).pipe(
+  getAll(): Observable<any[]>{
+    return this.http.get<any[]>(this.apiPath).pipe(
       catchError(this.handleError),
-      map(this.jsonDataToCategories)
+      map((obj) => obj)
     )
   }
 
