@@ -20,7 +20,13 @@ export class CategoriesListComponent implements OnInit {
       console.log(this.categories)
     }, (err: any) => {
       console.error(err)
-    })    
+    })
+  }
+
+  delete(category: any){
+    this.categoryService.delete(category.id).subscribe(() => {
+      this.categories = this.categories.filter(element => element != category)
+    })
   }
 
 }

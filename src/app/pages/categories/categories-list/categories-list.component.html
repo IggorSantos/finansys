@@ -27,7 +27,7 @@
       </td>
       <td>
         <a [routerLink]="[cat.id, 'edit']" class="buttonEdit btn btn-outline-info btn-sm">Editar</a>
-        <a class="btn btn-outline-danger btn-sm ml-2">Excluir</a>
+        <a (click)="delete(cat)" class="btn btn-outline-danger btn-sm ml-2">Excluir</a>
       </td>
     </tr>
   </tbody>
