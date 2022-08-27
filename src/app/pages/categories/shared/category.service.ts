@@ -44,7 +44,7 @@ export class CategoryService {
 
     return this.http.put(url, category).pipe(
       catchError(this.handleError),
-      map(() => category)
+      map((obj) => obj)
     )
   }
 

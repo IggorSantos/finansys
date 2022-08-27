@@ -2,8 +2,18 @@
   "posts": [
     {
       "id": 4,
-      "title": "Teste",
-      "description": "Teste"
+      "name": "Teste 2",
+      "description": "Teste 2"
+    },
+    {
+      "id": 5,
+      "name": "Alimentação",
+      "description": null
+    },
+    {
+      "id": 6,
+      "name": "LALLAla",
+      "description": "sasasa"
     }
   ],
   "comments": [],
