@@ -41,9 +41,16 @@
             <label for="description">Descrição</label>
             <input type="text" class="form-control" id="description" formControlName="description">
           </div>
-        </div>      
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="alert alert-danger mt-4" *ngIf="serverErrorMessages.length != 0">
+    <strong>Erro no servidor</strong>
+    <ul>
+      <li *ngFor="let error of serverErrorMessages">{{error}}</li>
+    </ul>
   </div>
 
   <div class="d-flex justify-content-end">
