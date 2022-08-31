@@ -10,7 +10,7 @@ import { Entry } from "./entry.model";
   providedIn: 'root'
 })
 export class EntryService {
-  private apiPath: string = "http://localhost:3000/posts";
+  private apiPath: string = "http://localhost:3000/comments";
 
   constructor(
     private http: HttpClient
@@ -60,12 +60,17 @@ export class EntryService {
   //Private Methods
   private jsonDataToEntries(jsonData: any[]): Entry[]{
     const entries: Entry[] = [];
-    jsonData.forEach(element => entries.push(element as Entry));
-    return entries;
+
+    jsonData.forEach(element => {
+     const entry = Object.assign(new Entry(), element);
+     entries.push(entry);
+   });
+
+   return entries;
 }
 
   private jsonDataToEntry(jsonData: any): Entry {
-     return jsonData as Entry;
+     return Object.assign(new Entry(), jsonData);
    }
 
   private handleError(error: any): Observable<any>{

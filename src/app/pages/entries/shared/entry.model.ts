@@ -8,7 +8,7 @@ export class Entry {
    public type?: string,
    public amount?: string,
    public date?: string,
-   public paid?: boolean,
+   public paid?: string,
    public categoryId?: number,
    public category?: Category
  ){ }
@@ -18,7 +18,4 @@ export class Entry {
    renevue: 'Receita'
  }
 
- get paidText(): string{
-   return this.paid ? 'Pago' : 'Pendente';
- }
 }

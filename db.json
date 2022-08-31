@@ -16,7 +16,18 @@
       "description": "sasasa"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": 1,
+      "name": "some comment",
+      "description": "some comment",
+      "date": "14/05/2022",
+      "amount": "30,00",
+      "type": "revenue",
+      "paid": "true"
+    }
+
+  ],
   "profile": {
     "name": "typicode"
   }
