@@ -39,7 +39,8 @@
           {{entry.amount}}
         </strong>
         <br>
-        <span class="badge badge-light">{{entry.paid}}</span>
+        <span *ngIf="entry.paid === 'true'" class="badge badge-primary">Pago</span>
+        <span *ngIf="entry.paid != 'true'" class="badge badge-primary">Pendente</span>
       </td>
       <td class="text-center">
         <a [routerLink]="[entry.id, 'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
