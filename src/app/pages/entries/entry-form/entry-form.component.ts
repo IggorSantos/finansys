@@ -5,6 +5,9 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { Entry } from "../shared/entry.model";
 import { EntryService } from "../shared/entry.service";
 
+import { Category } from "../../categories/shared/category.model";
+import { CategoryService } from "../../categories/shared/category.service";
+
 import { switchMap } from "rxjs/operators";
 
 import Swal from "sweetalert2";
@@ -22,6 +25,7 @@ export class EntryFormComponent implements OnInit, AfterContentChecked{
   serverErrorMessages: string[] = [];
   submittingForm: boolean = false;
   entry: Entry = new Entry();
+  categories: Array<Category> = [];
   id: number | any;
 
   ptBR = {
@@ -42,18 +46,31 @@ export class EntryFormComponent implements OnInit, AfterContentChecked{
     private entryService: EntryService,
     private route: ActivatedRoute,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private categoryService: CategoryService
   ) { }
 
   ngOnInit() {
     this.setCurrentAction();
     this.buildEntryForm();
     this.loadEntry();
+    this.loadCategories();
   }
 
   ngAfterContentChecked(){
     this.setPageTitle();
   }
+
+  get typeOptions(): Array<any>{
+   return Object.entries(Entry.types).map(
+     ([value, text]) => {
+       return {
+         text: text,
+         value: value
+       }
+     }
+   )
+ }
 
   submitForm(){
     this.submittingForm = true;
@@ -105,6 +122,12 @@ export class EntryFormComponent implements OnInit, AfterContentChecked{
       )
     }
   }
+
+  private loadCategories(){
+   this.categoryService.getAll().subscribe(
+     categories => this.categories = categories
+   );
+ }
 
 
   private setPageTitle() {
