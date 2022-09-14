@@ -25,8 +25,17 @@
       "amount": "30,00",
       "type": "revenue",
       "paid": "true"
+    },
+    {
+      "id": 2,
+      "name": "exemplo",
+      "description": null,
+      "type": "expense",
+      "amount": "1233",
+      "date": "19/09/2022",
+      "paid": true,
+      "categoryId": "4"
     }
-
   ],
   "profile": {
     "name": "typicode"
