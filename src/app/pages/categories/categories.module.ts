@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from "@angular/forms";
+import { SharedModule } from 'src/app/shared/shared.module';
 
 import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoriesListComponent } from './categories-list/categories-list.component';
@@ -13,9 +12,9 @@ import { CategoriesFormComponent } from './categories-form/categories-form.compo
     CategoriesFormComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     CategoriesRoutingModule,
-    ReactiveFormsModule
+    
   ]
 })
 export class CategoriesModule { }

@@ -35,6 +35,16 @@
       "date": "19/09/2022",
       "paid": true,
       "categoryId": "4"
+    },
+    {
+      "id": 3,
+      "name": "Ofertas",
+      "description": "asdas",
+      "type": "revenue",
+      "amount": "3232",
+      "date": "12/09/2022",
+      "paid": false,
+      "categoryId": "4"
     }
   ],
   "profile": {
