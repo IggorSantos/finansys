@@ -73,3 +73,5 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
       console.log("ERRO NA REQUISIÇÃO => ", error);
       return throwError(error);
     }
+
+  }
