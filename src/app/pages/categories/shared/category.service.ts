@@ -9,7 +9,7 @@ import { Category } from "./category.model";
 export class CategoryService extends BaseResourceService<Category>{
   
   constructor(protected override injector: Injector) {
-    super("http://localhost:3000/posts", injector)
+    super("http://localhost:3000/posts", injector, Category.fromJson)
    }
 
   

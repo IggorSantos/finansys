@@ -12,7 +12,7 @@ import { BaseResourceService } from 'src/app/shared/services/base-resource.servi
 })
 export class EntryService extends BaseResourceService<Entry>{
     constructor(protected override injector: Injector) { 
-      super("http://localhost:3000/comments", injector)
+      super("http://localhost:3000/comments", injector, Entry.fromJson)
   }
 
   override getAll(): Observable<any[]>{
