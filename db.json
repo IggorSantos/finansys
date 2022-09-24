@@ -29,13 +29,23 @@
     },
     {
       "id": 3,
-      "name": "Ofertas",
+      "name": "Ofertas edit",
       "description": "asdas",
       "type": "revenue",
       "amount": "3232",
       "date": "12/09/2022",
       "paid": false,
-      "categoryId": "4"
+      "categoryId": "5"
+    },
+    {
+      "id": 4,
+      "name": "asasas",
+      "description": "sasasas",
+      "type": "revenue",
+      "amount": "1233",
+      "date": "19/09/2022",
+      "paid": false,
+      "categoryId": "5"
     }
   ],
   "profile": {
