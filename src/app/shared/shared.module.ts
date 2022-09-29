@@ -24,7 +24,8 @@ import { FormFieldErrorComponent } from './components/form-field-error/form-fiel
     ReactiveFormsModule,
     BreadCrumbComponent,
     RouterModule,
-    PageHeaderComponent
+    PageHeaderComponent,
+    FormFieldErrorComponent
   ]
 })
 export class SharedModule { }
