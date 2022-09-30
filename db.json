@@ -31,6 +31,16 @@
       "date": "19/09/2022",
       "paid": false,
       "categoryId": "5"
+    },
+    {
+      "id": 5,
+      "name": "sasasa",
+      "description": "asdas",
+      "type": "revenue",
+      "amount": "1233",
+      "date": "27/09/2022",
+      "paid": false,
+      "categoryId": "5"
     }
   ],
   "profile": {
