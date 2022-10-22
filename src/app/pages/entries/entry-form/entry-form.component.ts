@@ -8,6 +8,7 @@ import { EntryService } from "../shared/entry.service";
 
 import { Category } from "../../categories/shared/category.model";
 import { CategoryService } from "../../categories/shared/category.service";
+import { ExpressionStatement } from '@angular/compiler';
 
 @Component({
   selector: 'app-entry-form',
@@ -32,6 +33,8 @@ export class EntryFormComponent extends BaseResourceFormComponent<Entry> impleme
     today: 'Hoje',
     clear: 'Limpar'
   }
+
+  optionsSelect = [{value: 'expense', text: 'Despesa'}, {value: 'revenue', text: 'Receita'}]
 
   constructor(protected entryService: EntryService, protected categoryService: CategoryService, protected override injector: Injector) {
     super(injector, new Entry(), entryService, Entry.fromJson)

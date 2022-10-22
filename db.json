@@ -41,6 +41,36 @@
       "date": "27/09/2022",
       "paid": false,
       "categoryId": "5"
+    },
+    {
+      "id": 6,
+      "name": "trtrrstydratyrda",
+      "description": null,
+      "type": "revenue",
+      "amount": "150",
+      "date": "19/10/2022",
+      "paid": true,
+      "categoryId": "5"
+    },
+    {
+      "id": 7,
+      "name": "dsasdasdasda",
+      "description": null,
+      "type": "revenue",
+      "amount": "50",
+      "date": "18/10/2022",
+      "paid": true,
+      "categoryId": "5"
+    },
+    {
+      "id": 8,
+      "name": "sadasdada",
+      "description": null,
+      "type": "expense",
+      "amount": "50",
+      "date": "18/10/2022",
+      "paid": true,
+      "categoryId": "5"
     }
   ],
   "profile": {
