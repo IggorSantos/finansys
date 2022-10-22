@@ -11,7 +11,7 @@ import { ReportsComponent } from './reports/reports.component';
   ],
   imports: [
     SharedModule,
-    ReportsRoutingModule
+    ReportsRoutingModule,    
   ]
 })
 export class ReportsModule { }
